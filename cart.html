@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cart Changer</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <style>
+      body{
+        background: #003973;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #E5E5BE, #003973);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #E5E5BE, #003973); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="d-flex justify-content-center " style="margin-top: 2%;">
+      <!-- card -->
+      <div class="card shadow-lg  mb-5 bg-body-secondary rounded" style="width: 16rem">
+        <img id="imageId" class="card-img-top" alt="CarImage" />
+        <div class="card-body">
+          <button class="btn btn-white fw-bold p-0 ps-1 pe-1" id="carButton">CAR</button>
+          <h4 class="card-title fw-bold">Mahindra Be 6</h4>
+          <p class="card-text"><i class="fa-solid fa-car"></i> Mileage: 4,000 Miles</p>
+          <p class="card-text"><i class="fa-solid fa-gas-pump"></i> Fuel: 25 mpg </p>
+          <p class="card-text">
+            <i class="fa-solid fa-shield"></i> Safety:
+            <i class="fa-solid fa-star text-warning"></i>
+            <i class="fa-solid fa-star text-warning"></i>
+            <i class="fa-solid fa-star text-warning"></i>
+            <i class="fa-solid fa-star text-warning"></i>
+            <i class="fa-solid fa-star text-warning"></i>
+          </p>
+          <p class="card-text">Pick Color:</p>
+          <p class="card-text fw-bold">
+            <i class="fa-solid fa-circle text-danger m-1" onclick="redCircle()"></i>
+            <i class="fa-solid fa-circle text-secondary m-1" onclick="greyCircle()"></i>
+            <i class="fa-solid fa-circle text-warning m-1" onclick="orangeCircle()"></i>
+            <i class="fa-solid fa-circle text-black m-1" onclick="blackCircle()"></i>
+            <i class="fa-solid fa-circle text-white m-1" onclick="whiteCircle()"></i>
+          </p>
+          <h3 id="carPrice"></h3>
+          <a href="#" class="btn btn-white" id="ATCbtn"
+            ><i class="fa-solid fa-cart-shopping"></i> Add To Cart</a
+          >
+        </div>
+      </div>
+    </div>
+    <script>
+      function greyCircle() {
+        
+        greyButton = document.querySelector("#carButton");
+        greyButton.style.backgroundColor = "grey";
+        greyButton.style.color = "white";
+
+        greyButton = document.querySelector("#ATCbtn");
+        greyButton.style.backgroundColor = "grey";
+        greyButton.style.color = "white";
+
+        greyButton = document.querySelector("#imageId");
+        document.getElementById("imageId").setAttribute( "src","https://imgd.aeplcdn.com/370x208/n/y5vhm9b_1796699.jpg?q=80");
+
+        greyButton = document.querySelector("#carPrice");
+        document.getElementById("carPrice").innerHTML = "₹ 20 Lac";
+      };
+      
+
+      function redCircle() {
+        greyButton = document.querySelector("#carButton");
+        greyButton.style.backgroundColor = "red";
+        greyButton.style.color = "white";
+
+        greyButton = document.querySelector("#ATCbtn");
+        greyButton.style.backgroundColor = "red";
+        greyButton.style.color = "white";
+
+        greyButton = document.querySelector("#imageId");
+        document.getElementById("imageId").setAttribute( "src","https://imgd.aeplcdn.com/370x208/n/wuuhm9b_1796697.jpg?q=80");
+
+        greyButton = document.querySelector("#carPrice");
+        document.getElementById("carPrice").innerHTML = "₹ 19.5 Lac";
+      };
+      redCircle();
+
+      function orangeCircle() {
+        greyButton = document.querySelector("#carButton");
+        greyButton.style.backgroundColor = "orange";
+        greyButton.style.color = "white";
+
+        greyButton = document.querySelector("#ATCbtn");
+        greyButton.style.backgroundColor = "orange";
+        greyButton.style.color = "white";
+
+        greyButton = document.querySelector("#imageId");
+        document.getElementById("imageId").setAttribute( "src","https://imgd.aeplcdn.com/370x208/n/zjthm9b_1796695.jpg?q=80");
+
+        greyButton = document.querySelector("#carPrice");
+        document.getElementById("carPrice").innerHTML = "₹ 21 Lac";
+      };
+
+      function blackCircle() {
+        greyButton = document.querySelector("#carButton");
+        greyButton.style.backgroundColor = "black";
+        greyButton.style.color = "white";
+
+        greyButton = document.querySelector("#ATCbtn");
+        greyButton.style.backgroundColor = "black";
+        greyButton.style.color = "white";
+
+        greyButton = document.querySelector("#imageId");
+        document.getElementById("imageId").setAttribute( "src","https://imgd.aeplcdn.com/370x208/n/rheim9b_1796705.jpg?q=80");
+
+        greyButton = document.querySelector("#carPrice");
+        document.getElementById("carPrice").innerHTML = "₹ 22 Lac";
+      };
+
+      function whiteCircle() {
+        greyButton = document.querySelector("#carButton");
+        greyButton.style.backgroundColor = "white";
+        greyButton.style.color = "black";
+
+        greyButton = document.querySelector("#ATCbtn");
+        greyButton.style.backgroundColor = "white";
+        greyButton.style.color = "black";
+
+        greyButton = document.querySelector("#imageId");
+        document.getElementById("imageId").setAttribute( "src","https://imgd.aeplcdn.com/370x208/n/2ocim9b_1796703.jpg?q=80");
+
+        greyButton = document.querySelector("#carPrice");
+        document.getElementById("carPrice").innerHTML = "₹ 20.4 Lac";
+      };
+      
+
+      
+      
+      
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
